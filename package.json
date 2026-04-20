@@ -1,0 +1,21 @@
+{
+  "name": "stem",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "pets/*",
+    "sensors/*",
+    "cli"
+  ],
+  "scripts": {
+    "hub": "npm run dev --workspace=packages/hub",
+    "dashboard": "npm run dev --workspace=packages/dashboard",
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}
