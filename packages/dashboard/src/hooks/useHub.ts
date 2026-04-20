@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { HubMessage, SensorReading, PetReaction } from '@stem/types'
 
+// Set NEXT_PUBLIC_HUB_URL in Vercel project settings to wss://your-hub.railway.app
 const HUB_URL = process.env.NEXT_PUBLIC_HUB_URL ?? 'ws://localhost:8080'
 
 export function useHub() {
